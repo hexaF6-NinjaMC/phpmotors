@@ -1,6 +1,6 @@
 <?php
     if (!$_SESSION['loggedin'] or $_SESSION['clientData']['clientLevel'] < 2) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         $title = "Image Management | PHP Motors, Inc.";
         $main = "<h1>Image Management</h1>";
@@ -12,7 +12,7 @@
         }
 
         $main .= <<<XML
-            <form action="/phpmotors/uploads/" method="post" enctype="multipart/form-data">
+            <form action="/uploads/" method="post" enctype="multipart/form-data">
                 <label for="invId">Vehicle</label>
         XML;
 
@@ -52,6 +52,6 @@
 
         $extras = True;
 
-        require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
     }
 ?>
