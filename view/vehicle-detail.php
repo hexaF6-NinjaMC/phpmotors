@@ -37,7 +37,7 @@
         }
 
         if (!$_SESSION['loggedin']) {
-            $reviewCallToAction = "<p class='mt-two'><em><a href='/phpmotors/accounts/?action=login'>Log in</a> to leave a review.</em></p>";
+            $reviewCallToAction = "<p class='mt-two'><em><a href='/accounts/?action=login'>Log in</a> to leave a review.</em></p>";
         } else {
             $clientId = $_SESSION['clientData']['clientId'];
     
@@ -84,5 +84,5 @@
         <hr class="length-eighth-less">
         <br>';
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
 ?>
