@@ -1,0 +1,145 @@
+@media screen and (min-width: 1100px) {
+    /* =====--ID's--===== */
+    #reviews {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        font-size: 1.5rem;
+    }
+
+    #upgrades {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .wrapper.top>#own-it {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        height: 2.5rem;
+        width: 100%;
+        min-width: initial;
+        min-height: initial;
+    }
+
+    #features {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #vehicle-name {
+        margin-bottom: 0.5em;
+    }
+
+    #own-it:hover {
+        background-color: rgba(166, 203, 235, 0.85);
+        margin: -.5rem -.5rem -.5rem -.5rem;
+    }
+
+    #vehicle-display {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #vehicle-display>div {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 100%;
+    }
+
+    #inv-display {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #inv-display>li {
+        display: grid;
+        grid-template-rows: 1fr .35fr .25fr;
+        margin-bottom: 10%;
+    }
+
+    #inv-display>li>a {
+        max-height: 30vh;
+    }
+
+    #inv-display>li>a>*:first-child {
+        margin: 15% auto 15%;
+    }
+
+    #inv-display>li img {
+        min-width: 10vw;
+        max-width: 12vw;
+    }
+
+    #section-three {
+        max-width: fit-content;
+        order: 1;
+        gap: 0.5em;
+    }
+
+    #section-two {
+        order: 3;
+    }
+
+    #section-one {
+        order: 2;
+    }
+
+    #vehicle-tn-display {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    #vehicle-tn-display>h2 {
+        display: none;
+    }
+
+    #vehicle-tn-display>img:hover {
+        transform: scale(1.5);
+    }
+
+    /* =====--CLASSES--===== */
+    .wrapper.top>img {
+        grid-area: 1 / 2 / 3 / 4;
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        right: 0;
+    }
+
+    .wrapper.top {
+        grid-template-rows: .5fr 1fr;
+        column-gap: 15vw;
+        margin: 0 auto;
+        max-width: max-content;
+    }
+
+    .wrapper.bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    nav>ul>li:hover>a{
+        color: var(--secondary-black);
+    }
+
+    nav>ul>li:hover {
+        background-color: var(--quaternary-light-blue);
+        margin: -.25rem .25rem -.25rem -.25rem;
+        font-size: 1.1rem;
+    }
+
+    /* =====--ELEMENTS--===== */
+    h1 {
+        font-size: 3rem;
+    }
+
+    section>h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    nav>button {
+        display: none;
+    }
+}

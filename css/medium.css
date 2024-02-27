@@ -1,0 +1,69 @@
+@media screen and (min-width: 660px) {
+    /* =====--ID's--===== */
+    .wrapper.top>#features {
+        font-size: 1.5em;
+    }
+
+    #inv-display {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 2em;
+        padding-right: 2em;
+        gap: 1em;
+    }
+    
+    #inv-display>li img {
+        min-width: 10dvw;
+        max-width: 35dvw;
+    }
+
+    #image-display {
+        grid-template-columns: 1fr auto;
+    }
+
+    #image-display>li {
+        max-width: 30vw;
+    }
+
+    #image-display>li:nth-of-type(odd) {
+        margin-right: 0.2em;
+    }
+
+    /* =====--CLASSES--===== */
+    .wrapper.top>img {
+        height: auto;
+        max-width: 60%;
+        right: 9dvw;
+    }
+
+    .wrapper.top>#own-it {
+        grid-column: 1 / 4;
+        column-span: all;
+        margin: 0 auto;
+    }
+
+    .wrapper.bottom {
+        margin-top: 0.5em;
+    }
+
+    nav>ul>li:hover>a{
+        color: var(--secondary-black);
+    }
+
+    nav>ul>li:hover {
+        background-color: var(--quaternary-light-blue);
+        margin: -.25rem .25rem -.25rem -.25rem;
+        font-size: 1.1rem;
+    }
+
+    nav>ul>li:hover>button {
+        background-color: transparent !important;
+        margin: 0 !important;
+        font-size: initial !important;
+    }
+
+    /* =====--ELEMENTS--===== */
+    h1 {
+        font-size: 2rem;
+    }
+}
