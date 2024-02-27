@@ -17,7 +17,7 @@
     * Variables for use with the Image Upload Functionality
     * **************************************************** */
     // directory name where uploaded images are stored
-    $image_dir = '/app/images/vehicles';
+    $image_dir = '/images/vehicles';
     // The path is the full path from the server root
     $image_dir_path = $_SERVER['DOCUMENT_ROOT'] . $image_dir;
 
