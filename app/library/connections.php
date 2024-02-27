@@ -18,7 +18,7 @@
                 return $link;
             }
         } catch (PDOException $e) {
-            // echo "It didn't work, error: ".$e->getMessage();
+            echo "It didn't work, error: ".$e->getMessage();
             header('Location: /view/500.php');
             exit;
         }
