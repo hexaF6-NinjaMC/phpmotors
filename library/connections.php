@@ -4,10 +4,10 @@
     */
 
     function phpmotorsConnect() {
-        $server = 'localhost';
-        $dbname = 'phpmotors';
-        $username = 'iClient';
-        $password = 'odYuefzJ*NU)qXTb';
+        $server = $_ENV['MYSQLHOST'];
+        $dbname = $_ENV['MYSQL_DATABASE'];
+        $username = $_ENV['MYSQLUSER'];
+        $password = $_ENV['MYSQLPASSWORD'];
         $dsn = "mysql:host=$server;dbname=$dbname";
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
