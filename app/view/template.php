@@ -14,7 +14,7 @@
     else { echo "Content Title | PHP Motors"; } ?></title>
 </head>
 <body>
-    <?php require $_SERVER['DOCUMENT_ROOT'].'/app/snippets/header.php'; ?>
+    <?php require $_SERVER['DOCUMENT_ROOT'].'/snippets/header.php'; ?>
 
     <main><?php if (isset($main)) { echo $main; }
     else { echo "<h1 id='template-heading'>This is where {MAIN} content will be dynamically injected into this template.</h1>"; } ?>

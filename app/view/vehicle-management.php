@@ -47,6 +47,6 @@
             <script src="../js/inventory.js"></script>
         XML;
 
-        require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
     }
 ?>

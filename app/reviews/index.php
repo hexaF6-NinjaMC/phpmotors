@@ -195,7 +195,7 @@
                     exit;
                 } else {
                     $_SESSION['message'] = "<p class='message error'>Error: failed to delete review. Please try again.</p>";
-                    header('Location: /accounts/?action=logged-in');
+                    header('Location: /app/accounts/?action=logged-in');
                     exit;
                 }
                 break;
