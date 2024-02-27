@@ -1,6 +1,6 @@
 <?php
     if (!$_SESSION['loggedin']) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         $title = "Update Account Info | PHP Motors";
 
@@ -18,7 +18,7 @@
 
         // Change Account "Safe" Info form
         $main .= <<<XML
-            <form method="post" action="/phpmotors/accounts/">
+            <form method="post" action="/accounts/">
                 <p><span>*</span>: Required</p>
                 <label for='clientFirstname'>First name<span>*</span>:</label>
         XML;
@@ -76,7 +76,7 @@
 
         // Change Password ("Unsafe") form
         $main .= <<<XML
-            <form method="post" action="/phpmotors/accounts/">
+            <form method="post" action="/accounts/">
                 <p><span>*</span>: Required</p>
                 <span class="warning-text">Password must have at least 1 number, 1 uppercase letter, 1 special character, and be at least 8 characters long.</span>
                 <label for='clientPassword'>Password<span>*</span>:</label>
@@ -108,5 +108,5 @@
             <script src="../js/showPass.js"></script>
         XML;
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
 ?>
