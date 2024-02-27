@@ -8,7 +8,7 @@
     }
     
     $main .= <<<XML
-    <form method='post' action='/app/accounts/'>
+    <form method='post' action='/accounts/'>
         <p><span>*</span>: Required</p>
         <label for='clientFirstname'>First name<span>*</span>:</label>
     XML;
@@ -51,7 +51,7 @@
             <button type="submit" value="submit">Submit</button>
             <!-- Add the action name/value pair -->
             <input type="hidden" name="action" value="register">
-            <p>Already have an account? <a href="/app/accounts/?action=login">Login!</a></p>
+            <p>Already have an account? <a href="/accounts/?action=login">Login!</a></p>
         </form>
         <hr class="length-eighth-less">
         <br>

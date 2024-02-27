@@ -18,7 +18,7 @@
 
         // Change Account "Safe" Info form
         $main .= <<<XML
-            <form method="post" action="/app/accounts/">
+            <form method="post" action="/accounts/">
                 <p><span>*</span>: Required</p>
                 <label for='clientFirstname'>First name<span>*</span>:</label>
         XML;

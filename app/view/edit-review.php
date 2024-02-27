@@ -16,7 +16,7 @@
         $clientId = $_SESSION['clientData']['clientId'];
     
         $main .= <<<XML
-            <form method="post" action="/app/reviews/">
+            <form method="post" action="/reviews/">
                 <label for="screenName">Screen Name<span>*</span>:</label>
         XML;
 

@@ -11,7 +11,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/app/vehicles/">
+            <form method="post" action="/vehicles/">
                 <p><span>*</span>: Required</p>
         XML;
         
@@ -119,7 +119,7 @@
                 <button type="submit" value="submit">Add Vehicle</button>
                 <!-- Add the action name/value pair -->
                 <input type="hidden" name="action" value="add-vehicle">
-                <p>Need to add a vehicle classification? <a href="/app/vehicles/?action=add-classification-view">Add it HERE!</a></p>
+                <p>Need to add a vehicle classification? <a href="/vehicles/?action=add-classification-view">Add it HERE!</a></p>
             </form>
             <hr class="length-eighth-less">
             <br>

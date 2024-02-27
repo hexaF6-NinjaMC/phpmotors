@@ -11,7 +11,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/app/reviews/">
+            <form method="post" action="/reviews/">
                 <p><span>*</span>: Required</p>
                 <label for="screenName">Screen Name<span>*</span>:</label>
         XML;

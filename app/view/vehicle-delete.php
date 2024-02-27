@@ -17,7 +17,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/app/vehicles/">
+            <form method="post" action="/vehicles/">
                 <p><span>*</span>: Required</p>
         XML;
 

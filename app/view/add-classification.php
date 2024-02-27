@@ -19,7 +19,7 @@
                 <button type="submit" value="submit">Submit</button>
                 <!-- Add the action name/value pair -->
                 <input type="hidden" name="action" value="add-classification">
-                <p>Need to add a vehicle? <a href="/app/vehicles/?action=add-vehicle-view">Add one HERE!</a></p>
+                <p>Need to add a vehicle? <a href="/vehicles/?action=add-vehicle-view">Add one HERE!</a></p>
             </form>
             <hr class="length-eighth-less">
             <br>

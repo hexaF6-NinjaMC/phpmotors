@@ -12,7 +12,7 @@
         }
 
         $main .= <<<XML
-            <form action="/app/uploads/" method="post" enctype="multipart/form-data">
+            <form action="/uploads/" method="post" enctype="multipart/form-data">
                 <label for="invId">Vehicle</label>
         XML;
 
