@@ -18,13 +18,8 @@
                 return $link;
             }
         } catch (PDOException $e) {
-<<<<<<< HEAD
-            // echo "It didn't work, error: ".$e->getMessage();
-            header('Location: /app/view/500.php');
-=======
             echo "It didn't work, error: ".$e->getMessage();
             header('Location: /view/500.php');
->>>>>>> 61512317d66696dbdd15a99085838ddcadae92c0
             exit;
         }
     }
