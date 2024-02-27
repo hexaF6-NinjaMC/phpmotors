@@ -35,10 +35,10 @@
 
     switch ($action){
         case 'template':
-            include 'view/template.php';
+            include '/view/template.php';
             break;
 
         default:
-            include 'view/home.php';
+            include '/view/home.php';
     }
 ?>
