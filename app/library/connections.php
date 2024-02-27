@@ -8,7 +8,7 @@
         $dbname = $_ENV['MYSQL_DATABASE'];
         $username = $_ENV['MYSQLUSER'];
         $password = $_ENV['MYSQLPASSWORD'];
-        $dsn = "mysql://root:6B5cH41ffDe2-FH3AFgfG63ebaAh2D41@viaduct.proxy.rlwy.net:26657/railway";
+        $dsn = "mysql:host=$server;dbname=$dbname;port=26657";
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
         try {
