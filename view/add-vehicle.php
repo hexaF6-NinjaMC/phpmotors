@@ -1,6 +1,6 @@
 <?php
     if ((!$_SESSION['loggedin']) or $_SESSION['clientData']['clientLevel'] < 2) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         $title = "Add Vehicle | PHP Motors";
         
@@ -119,11 +119,11 @@
                 <button type="submit" value="submit">Add Vehicle</button>
                 <!-- Add the action name/value pair -->
                 <input type="hidden" name="action" value="add-vehicle">
-                <p>Need to add a vehicle classification? <a href="/phpmotors/vehicles/?action=add-classification-view">Add it HERE!</a></p>
+                <p>Need to add a vehicle classification? <a href="/vehicles/?action=add-classification-view">Add it HERE!</a></p>
             </form>
             <hr class="length-eighth-less">
             <br>
         XML;
-        require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
     }
 ?>
