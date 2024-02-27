@@ -39,7 +39,7 @@
             <section class="pl-two pb-two">
                 <h2>Update Account Info</h2>
                 <p>Update your account information below.</p>
-                <a href="accounts/?action=updateAccount">Update my information</a>
+                <a href="/accounts/?action=updateAccount">Update my information</a>
             </section>
             <hr class="length-eighth-less">
             <br>
