@@ -165,8 +165,8 @@
         foreach ($vehicles as $vehicle) {
             $vehicle['invPrice'] = number_format($vehicle['invPrice'], 2);
             $dv .= '<li>';
-            $dv .= "<a href='/phpmotors/vehicles/?action=vehicleInformation&invId=$vehicle[invId]'><img src='$vehicle[imgPath]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'></a>";
-            $dv .= "<a href='/phpmotors/vehicles/?action=vehicleInformation&invId=$vehicle[invId]'><h2>$vehicle[invMake] $vehicle[invModel]</h2></a>";
+            $dv .= "<a href='/vehicles/?action=vehicleInformation&invId=$vehicle[invId]'><img src='$vehicle[imgPath]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'></a>";
+            $dv .= "<a href='/vehicles/?action=vehicleInformation&invId=$vehicle[invId]'><h2>$vehicle[invMake] $vehicle[invModel]</h2></a>";
             $dv .= "<span>\$$vehicle[invPrice]</span>";
             $dv .= '</li>';
         }
