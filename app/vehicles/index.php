@@ -160,7 +160,7 @@
 
             if ($updateResult) {
                 $_SESSION['message'] = "<p class='message success'>Successfully updated \"$invMake $invModel\".</p>";
-                header('Location: /phpmotors/vehicles/');
+                header('Location: /app/vehicles/');
                 exit;
             } else {
                 $_SESSION['message'] = "<p class='message error'>Sorry, the vehicle update failed. Please try again.</p>";
@@ -174,7 +174,7 @@
             $invInfo = getInvItemInfo($invId);
             
             if ($invInfo == NULL) {
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 $_SESSION['message'] = '<p class="message error">You are not allowed to delete that record!</p>';
                 exit;
             }
@@ -207,7 +207,7 @@
                 // exit;
 
                 $_SESSION['message'] = '<p class="message error">Please confirm deletion by selecting the checkbox below!</p>';
-                header("Location: /vehicles/?action=del&invId=$invId");
+                header("Location: /app/vehicles/?action=del&invId=$invId");
                 exit;
             }
 
@@ -215,11 +215,11 @@
 
             if ($deleteResult) {
                 $_SESSION['message'] = "<p class='message success'>Successfully deleted \"$invMake $invModel\".</p>";
-                header('Location: /vehicles/');
+                header('Location: /app/vehicles/');
                 exit;
             } else {
                 $_SESSION['message'] = "<p class='message error'>Error: vehicle deletion of \"$invMake $invModel\" failed. Please try again.</p>";
-                header('Location: /vehicles/');
+                header('Location: /app/vehicles/');
                 exit;
             }
             break;

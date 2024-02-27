@@ -37,12 +37,12 @@
         }
 
         if (!$_SESSION['loggedin']) {
-            $reviewCallToAction = "<p class='mt-two'><em><a href='/accounts/?action=login'>Log in</a> to leave a review.</em></p>";
+            $reviewCallToAction = "<p class='mt-two'><em><a href='/app/accounts/?action=login'>Log in</a> to leave a review.</em></p>";
         } else {
             $clientId = $_SESSION['clientData']['clientId'];
     
             $reviewCallToAction = <<<XML
-                <form method="post" action="/phpmotors/reviews/">
+                <form method="post" action="/app/reviews/">
                     <label for="screenName">Screen Name<span>*</span>:</label>
             XML;
 
@@ -84,5 +84,5 @@
         <hr class="length-eighth-less">
         <br>';
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

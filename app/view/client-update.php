@@ -18,7 +18,7 @@
 
         // Change Account "Safe" Info form
         $main .= <<<XML
-            <form method="post" action="/accounts/">
+            <form method="post" action="/app/accounts/">
                 <p><span>*</span>: Required</p>
                 <label for='clientFirstname'>First name<span>*</span>:</label>
         XML;
@@ -108,5 +108,5 @@
             <script src="../js/showPass.js"></script>
         XML;
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

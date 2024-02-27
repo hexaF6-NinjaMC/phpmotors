@@ -11,7 +11,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/reviews/">
+            <form method="post" action="/app/reviews/">
                 <p><span>*</span>: Required</p>
                 <label for="screenName">Screen Name<span>*</span>:</label>
         XML;
@@ -46,6 +46,6 @@
             <br>
         ";
 
-        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
     }
 ?>

@@ -12,5 +12,5 @@
     $main .= '
         <hr class="length-eighth-less">
         <br>';
-    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

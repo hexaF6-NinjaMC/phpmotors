@@ -71,7 +71,7 @@
             $regOutcome = regClient($clientFirstname, $clientLastname, $clientEmail, $hashedPassword);
 
             if ($regOutcome === 1) {
-                header('Location: /accounts/?action=login');
+                header('Location: /app/accounts/?action=login');
                 setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
                 $_SESSION['message'] = "<p class='message success'>Thanks for registering, $clientFirstname! You may now use your email and password to login.</p>";
                 exit;
@@ -147,7 +147,7 @@
 
         case 'logout':
             $_SESSION['message'] = NULL;
-            header('Location: /phpmotors/');
+            header('Location: /');
             $_SESSION['loggedin'] = FALSE;
             $_SESSION['clientData'] = NULL;
             break;
@@ -194,11 +194,11 @@
                 $clientData = getClientById($clientId);
                 $_SESSION['message'] = '<p class="message success">User info was updated successfully.</p><br>';
                 $_SESSION['clientData'] = $clientData;
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 exit;
             } else {
                 $_SESSION['message'] = '<p class="message error">Failed to update user information.</p><br>';
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 exit;
             }
             break;
@@ -223,11 +223,11 @@
 
             if ($updateOutcome === 1) {
                 $_SESSION['message'] = "<p class='message success'>Succesfully updated password. You may now use your new password to login.</p><br>";
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 exit;
             } else {
                 $_SESSION['message'] = "<p class='message error'>Password change request failed.</p><br>";
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 exit;
             }          
             break;

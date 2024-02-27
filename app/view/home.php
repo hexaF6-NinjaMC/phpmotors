@@ -1,9 +1,9 @@
 <?php
-    $DELOREAN = '/images/vehicles/delorean.jpg';
-    $FLUX_IMG = '/images/upgrades/flux-cap.png';
-    $FLAME_DECAL_IMG = '/images/upgrades/flame.jpg';
-    $BUMPER_STICKER_IMG = '/images/upgrades/bumper_sticker.jpg';
-    $HUB_CAP_IMG = '/images/upgrades/hub-cap.jpg';
+    $DELOREAN = '/app/images/vehicles/delorean.jpg';
+    $FLUX_IMG = '/app/images/upgrades/flux-cap.png';
+    $FLAME_DECAL_IMG = '/app/images/upgrades/flame.jpg';
+    $BUMPER_STICKER_IMG = '/app/images/upgrades/bumper_sticker.jpg';
+    $HUB_CAP_IMG = '/app/images/upgrades/hub-cap.jpg';
     $title = "Home | PHP Motors";
 ?>
 
@@ -49,5 +49,5 @@ $main = "
 ?>
 
 <?php
-    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

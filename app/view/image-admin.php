@@ -12,7 +12,7 @@
         }
 
         $main .= <<<XML
-            <form action="/uploads/" method="post" enctype="multipart/form-data">
+            <form action="/app/uploads/" method="post" enctype="multipart/form-data">
                 <label for="invId">Vehicle</label>
         XML;
 
@@ -52,6 +52,6 @@
 
         $extras = True;
 
-        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
     }
 ?>

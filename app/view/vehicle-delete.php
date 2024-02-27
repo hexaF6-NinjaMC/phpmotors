@@ -17,7 +17,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/vehicles/">
+            <form method="post" action="/app/vehicles/">
                 <p><span>*</span>: Required</p>
         XML;
 
@@ -65,6 +65,6 @@
             <br>
         XML;
         
-        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
     }
 ?>

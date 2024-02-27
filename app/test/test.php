@@ -5,5 +5,5 @@
     <h1>Welcome, $email</h1>
     <p>This is your Dashboard.</p>
     XML;
-    require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

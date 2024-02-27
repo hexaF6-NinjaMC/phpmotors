@@ -39,7 +39,7 @@
             <section class="pl-two pb-two">
                 <h2>Update Account Info</h2>
                 <p>Update your account information below.</p>
-                <a href="/accounts/?action=updateAccount">Update my information</a>
+                <a href="/app/accounts/?action=updateAccount">Update my information</a>
             </section>
             <hr class="length-eighth-less">
             <br>
@@ -50,12 +50,12 @@
                 <section class="pl-two pb-two">
                     <h2>Vehicle Management System</h2>
                     <p>Access the vehicle management system below.</p>
-                    <a href="/vehicles/">Vehicle Management System</a>
+                    <a href="/app/vehicles/">Vehicle Management System</a>
                 </section>
                 <hr class="length-eighth-less">
                 <br>
             XML;
         }
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
 ?>

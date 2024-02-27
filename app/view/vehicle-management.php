@@ -14,8 +14,8 @@
 
         $main .= <<<XML
             <ul>
-                <li><a href="/vehicles/?action=add-vehicle-view">Add a Vehicle to an already-existing Classification</a></li>
-                <li><a href="/vehicles/?action=add-classification-view">Add a NEW Classification</a></li>
+                <li><a href="/app/vehicles/?action=add-vehicle-view">Add a Vehicle to an already-existing Classification</a></li>
+                <li><a href="/app/vehicles/?action=add-classification-view">Add a NEW Classification</a></li>
             </ul>
             <br>
         XML;
@@ -47,6 +47,6 @@
             <script src="../js/inventory.js"></script>
         XML;
 
-        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/app/view/template.php';
     }
 ?>

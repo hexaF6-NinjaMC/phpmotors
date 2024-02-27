@@ -42,7 +42,7 @@
             // Check for missing data
             if (empty($reviewText)) {
                 $_SESSION['message'] = '<p class="message error">Please provide information for all empty form fields.</p>';
-                header("Location: /vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
+                header("Location: /app/vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
                 exit;
             }
 
@@ -59,7 +59,7 @@
             // exit;
 
             if ($clientId != $expectedClientId || $invId != $expectedInvId) {
-                header("Location: /vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
+                header("Location: /app/vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
                 $_SESSION['message'] = '<p class="message error">Unable to post review due to form malignancy.</p>';
                 exit;
             }
@@ -68,11 +68,11 @@
 
             if ($revOutcome === 1) {
                 $_SESSION['message'] = "<p class='message success'>Your review has been successfully added! Thank you for taking the time to leave your valuable feedback.</p>";
-                header("Location: /vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
+                header("Location: /app/vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
                 exit;
             } else {
                 $_SESSION['message'] = "<p class='message error'>Your review was unable to be submitted! Please try again.</p>";
-                header("Location: /vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
+                header("Location: /app/vehicles/?action=vehicleInformation&invId=".$_SESSION['invId']);
                 exit;
             }
             break;
@@ -81,7 +81,7 @@
             $reviewId = filter_input(INPUT_GET, 'reviewId', FILTER_VALIDATE_INT);
             $clientReviewByReviewId = getClientReviewByReviewId($reviewId);
             if ($clientReviewByReviewId == NULL) {
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 $_SESSION['message'] = '<p class="message error">You are not allowed to update that review!</p>';
                 exit;
             }
@@ -89,14 +89,14 @@
                 $expectedClientId = $_SESSION['clientData']['clientId'];
                 $clientId = $clientReviewByReviewId['clientId'];
                 if ($clientId != $expectedClientId) {
-                    header("Location: /accounts/?action=logged-in");
+                    header("Location: /app/accounts/?action=logged-in");
                     $_SESSION['message'] = '<p class="message error">You are not allowed to update that review!</p>';
                     exit;
                 }
                 $reviewText = $clientReviewByReviewId['reviewText'];
                 include '../view/edit-review.php';
             } else {
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 $_SESSION['message'] = '<p class="message error">Couldn\'t find a review matching those records.</p>';
             }
             break;
@@ -108,7 +108,7 @@
             // Check for missing data
             if (empty($reviewText)) {
                 $_SESSION['message'] = '<p class="message error">Please provide information for all empty form fields.</p>';
-                header("Location: /reviews/?action=edit-review-view&reviewId=$reviewId");
+                header("Location: /app/reviews/?action=edit-review-view&reviewId=$reviewId");
                 exit;
             }
 
@@ -116,11 +116,11 @@
 
             if ($revOutcome === 1) {
                 $_SESSION['message'] = "<p class='message success'>Your review has been successfully updated! Thank you for taking the time to leave your valuable feedback.</p>";
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 exit;
             } else {
                 $_SESSION['message'] = "<p class='message error'>Your review was unable to be submitted. It appears nothing changed. If this is incorrect, please try again.</p>";
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 exit;
             }
             break;
@@ -129,7 +129,7 @@
             $reviewId = filter_input(INPUT_GET, 'reviewId', FILTER_VALIDATE_INT);
             $clientReviewByReviewId = getClientReviewByReviewId($reviewId);
             if ($clientReviewByReviewId == NULL) {
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 $_SESSION['message'] = '<p class="message error">You are not allowed to delete that review!</p>';
                 exit;
             }
@@ -139,13 +139,13 @@
                 $expectedClientId = $_SESSION['clientData']['clientId'];
 
                 if ($clientId != $expectedClientId) {
-                    header("Location: /accounts/?action=logged-in");
+                    header("Location: /app/accounts/?action=logged-in");
                     $_SESSION['message'] = '<p class="message error">You are not allowed to delete that review!</p>';
                     exit;
                 }
                 include '../view/delete-review.php';
             } else {
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 $_SESSION['message'] = '<p class="message error">Couldn\'t find a review matching those records.</p>';
             }
             break;
@@ -156,7 +156,7 @@
             $reviewId = filter_input(INPUT_POST, 'reviewId', FILTER_SANITIZE_NUMBER_INT);
             $clientReviewByReviewId = getClientReviewByReviewId($reviewId);
             if ($clientReviewByReviewId == NULL) {
-                header("Location: /accounts/?action=logged-in");
+                header("Location: /app/accounts/?action=logged-in");
                 $_SESSION['message'] = '<p class="message error">You are not allowed to delete that review!</p>';
                 exit;
             }
@@ -183,7 +183,7 @@
                 $expectedClientId = $_SESSION['clientData']['clientId'];
 
                 if ($clientId != $expectedClientId) {
-                    header("Location: /accounts/?action=logged-in");
+                    header("Location: /app/accounts/?action=logged-in");
                     $_SESSION['message'] = '<p class="message error">You are not allowed to delete that review!</p>';
                     exit;
                 }
@@ -191,7 +191,7 @@
                 $deleteResult = deleteReview($reviewId);
                 if ($deleteResult) {
                     $_SESSION['message'] = "<p class='message success'>Successfully deleted review.</p>";
-                    header('Location: /accounts/?action=logged-in');
+                    header('Location: /app/accounts/?action=logged-in');
                     exit;
                 } else {
                     $_SESSION['message'] = "<p class='message error'>Error: failed to delete review. Please try again.</p>";
@@ -200,7 +200,7 @@
                 }
                 break;
             } else {
-                header('Location: /accounts/?action=logged-in');
+                header('Location: /app/accounts/?action=logged-in');
                 $_SESSION['message'] = '<p class="message error">Couldn\'t find a review matching those records.</p>';
             }
             break;
