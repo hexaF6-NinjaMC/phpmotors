@@ -1,6 +1,6 @@
 <?php
     if ((!$_SESSION['loggedin']) or $_SESSION['clientData']['clientLevel'] < 2) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         $title = "Add Vehicle Classification | PHP Motors";
         
@@ -11,7 +11,7 @@
         }
         
         $main .= <<<XML
-            <form method="post" action="/phpmotors/vehicles/">
+            <form method="post" action="/vehicles/">
                 <p><span>*</span>: Required</p>
                 <span class="warning-text">Classification Name can be no more than 30 characters long.</span>
                 <label for="classificationName">Classification Name<span>*</span>:</label>
@@ -19,11 +19,11 @@
                 <button type="submit" value="submit">Submit</button>
                 <!-- Add the action name/value pair -->
                 <input type="hidden" name="action" value="add-classification">
-                <p>Need to add a vehicle? <a href="/phpmotors/vehicles/?action=add-vehicle-view">Add one HERE!</a></p>
+                <p>Need to add a vehicle? <a href="/vehicles/?action=add-vehicle-view">Add one HERE!</a></p>
             </form>
             <hr class="length-eighth-less">
             <br>
         XML;
-        require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
     }
 ?>

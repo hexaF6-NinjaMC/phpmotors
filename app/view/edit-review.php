@@ -1,6 +1,6 @@
 <?php
     if (!$_SESSION['loggedin']) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         $title = "Update Review | PHP Motors";
 
@@ -16,7 +16,7 @@
         $clientId = $_SESSION['clientData']['clientId'];
     
         $main .= <<<XML
-            <form method="post" action="/phpmotors/reviews/">
+            <form method="post" action="/reviews/">
                 <label for="screenName">Screen Name<span>*</span>:</label>
         XML;
 
@@ -46,5 +46,5 @@
             <br>
         ";
     }
-    require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
 ?>

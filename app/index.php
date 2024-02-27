@@ -5,11 +5,11 @@
     session_start();
 
     // Get the database connection file
-    require_once 'library/connections.php';
+    require_once '/library/connections.php';
     // Get the functions library
-    require_once 'library/functions.php';
+    require_once '/library/functions.php';
     // Get the PHP Motors model for use as needed
-    require_once 'model/main-model.php';
+    require_once '/model/main-model.php';
 
     // Get the array of classifications
     $classifications = getClassifications();
@@ -35,10 +35,10 @@
 
     switch ($action){
         case 'template':
-            include 'view/template.php';
+            include '/view/template.php';
             break;
 
         default:
-            include 'view/home.php';
+            include '/view/home.php';
     }
 ?>

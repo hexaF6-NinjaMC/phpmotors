@@ -15,9 +15,9 @@
     function createNavList($classifications) {
         // Build a navigation bar using the $classifications array
         $navList = '<ul class="navigation responsive">';
-        $navList .= "<li><a href='/phpmotors/' title='View the PHP Motors home page'>Home</a></li>";
+        $navList .= "<li><a href='/' title='View the PHP Motors home page'>Home</a></li>";
         foreach ($classifications as $classification) {
-            $navList .= "<li><a href='/phpmotors/vehicles/?action=classification&classificationName=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
+            $navList .= "<li><a href='/vehicles/?action=classification&classificationName=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
         }
         $navList .= '</ul>';
 
@@ -113,7 +113,7 @@
             $id .= '<li>';
             $id .= "<h3>$image[invMake] $image[invModel]</h3>";
             $id .= "<img src='$image[imgPath]' title='$image[invMake] $image[invModel] image on PHP Motors.com' alt='$image[invMake] $image[invModel] image on PHP Motors.com'>";
-            $id .= "<p><a href='/phpmotors/uploads?action=delete&imgId=$image[imgId]&filename=$image[imgName]' title='Delete the image'>Delete $image[imgName] for $image[invMake] $image[invModel]</a></p>";
+            $id .= "<p><a href='/uploads?action=delete&imgId=$image[imgId]&filename=$image[imgName]' title='Delete the image'>Delete $image[imgName] for $image[invMake] $image[invModel]</a></p>";
             $id .= '</li>';
         }
         $id .= '</ul>';
@@ -276,7 +276,7 @@
                     <h4 class='inv-make-model'>$inventoryMakeAndModel</h4>
                     <span class='review-date'>$reviewDate</span>
                     <q><em>$reviewInfo[reviewText]</em></q>
-                    <span class='review-links'><a href='/phpmotors/reviews/?action=edit-review-view&reviewId=$reviewInfo[reviewId]'>Update</a> | <a href='/phpmotors/reviews/?action=delete-review-view&reviewId=$reviewInfo[reviewId]'>Delete</a></span>
+                    <span class='review-links'><a href='/reviews/?action=edit-review-view&reviewId=$reviewInfo[reviewId]'>Update</a> | <a href='/reviews/?action=delete-review-view&reviewId=$reviewInfo[reviewId]'>Delete</a></span>
                 </section>
                 <br>";
             }

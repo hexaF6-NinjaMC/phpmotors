@@ -5,7 +5,7 @@ let classificationList = document.querySelector("#classificationList");
 classificationList.addEventListener("change", function () {
     let classificationId = classificationList.value;
     console.log(`classificationId is: ${classificationId}`);
-    let classIdURL = "/phpmotors/vehicles/index.php?action=getInventoryItems&classificationId=" + classificationId;
+    let classIdURL = "/vehicles/index.php?action=getInventoryItems&classificationId=" + classificationId;
 
     fetch(classIdURL)
     
@@ -42,8 +42,8 @@ function buildInventoryList(data) {
     data.forEach(function (element) {
         console.log(element.invId + ", " + element.invModel);
         dataTable += `<tr><td>${element.invMake} ${element.invModel}</td>`;
-        dataTable += `<td><a href='/phpmotors/vehicles?action=mod&invId=${element.invId}' title='Click to modify'>Modify</a></td>`;
-        dataTable += `<td><a href='/phpmotors/vehicles?action=del&invId=${element.invId}' title='Click to delete'>Delete</a></td></tr>`;
+        dataTable += `<td><a href='/vehicles?action=mod&invId=${element.invId}' title='Click to modify'>Modify</a></td>`;
+        dataTable += `<td><a href='/vehicles?action=del&invId=${element.invId}' title='Click to delete'>Delete</a></td></tr>`;
     });
 
     dataTable += '</tbody>';

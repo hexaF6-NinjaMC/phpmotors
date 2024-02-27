@@ -1,6 +1,6 @@
 <?php
     if ($_SESSION['clientData']['clientLevel'] < 2) {
-        header('Location: /phpmotors/');
+        header('Location: /');
     } else {
         // Add Dynamic Title
         if (isset($invInfo['invMake'])) {
@@ -17,7 +17,7 @@
         }
 
         $main .= <<<XML
-            <form method="post" action="/phpmotors/vehicles/">
+            <form method="post" action="/vehicles/">
                 <p><span>*</span>: Required</p>
         XML;
 
@@ -65,6 +65,6 @@
             <br>
         XML;
         
-        require $_SERVER['DOCUMENT_ROOT'].'/phpmotors/view/template.php';
+        require $_SERVER['DOCUMENT_ROOT'].'/view/template.php';
     }
 ?>

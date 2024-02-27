@@ -4,10 +4,10 @@
     */
 
     function phpmotorsConnect() {
-        $server = 'localhost';
-        $dbname = 'phpmotors';
-        $username = 'iClient';
-        $password = 'odYuefzJ*NU)qXTb';
+        $server = $_ENV['MYSQLHOST'];
+        $dbname = $_ENV['MYSQL_DATABASE'];
+        $username = $_ENV['MYSQLUSER'];
+        $password = $_ENV['MYSQLPASSWORD'];
         $dsn = "mysql:host=$server;dbname=$dbname";
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
@@ -19,7 +19,7 @@
             }
         } catch (PDOException $e) {
             // echo "It didn't work, error: ".$e->getMessage();
-            header('Location: /phpmotors/view/500.php');
+            header('Location: /view/500.php');
             exit;
         }
     }
